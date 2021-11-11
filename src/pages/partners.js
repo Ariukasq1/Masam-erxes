@@ -5,8 +5,9 @@ import { Partner } from "../components/partners/Partners";
 const Partners = () => {
   return (
     <Layout>
-      <div className="page partners">Partners page</div>
-      <Partner />
+      <div className="page partners">
+        <Partner />
+      </div>
     </Layout>
   );
 };

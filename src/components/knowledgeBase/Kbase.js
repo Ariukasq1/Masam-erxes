@@ -15,7 +15,9 @@ export const Kbase = () => {
             <button type="button">Гарын авлага</button>
             <button type="button">Холбоотой цахим хуудсууд</button>
           </div>
-          <p className="title"><b>Эрх зүйн хүрээ</b></p>
+          <p className="title">
+            <b>Эрх зүйн хүрээ</b>
+          </p>
           <div className="line"></div>
           <p className="">
             Монгол улсын хүчин төгөлдөр хууль, холбогдох захиргааны хэм
@@ -39,27 +41,35 @@ export const Kbase = () => {
           <div className="files-container">
             <div className="files">
               <h4>Баримт, бичиг</h4>
-              <img src="#" alt="PDF" />
-              <a href="test_file.zip" download>
-                Судалгааны тайлан
-              </a>
+              <div className="center">
+                <img src="#" alt="PDF" />
+                <a href="#" download>
+                  Судалгааны тайлан
+                </a>
+              </div>
             </div>
             <div className="files">
               <h4>Баримт, бичиг</h4>
-              <img src="#" alt="PDF" />
-              <a href="test_file.zip" download>
-                Судалгааны тайлан
-              </a>
+              <div className="center">
+                <img src="#" alt="PDF" />
+                <a href="#" download>
+                  Судалгааны тайлан
+                </a>
+              </div>
             </div>
             <div className="files">
               <h4>Баримт, бичиг</h4>
-              <img src="#" alt="PDF" />
-              <a href="test_file.zip" download>
-                Судалгааны тайлан
-              </a>
+              <div className="center">
+                <img src="#" alt="PDF" />
+                <a href="#" download>
+                  Судалгааны тайлан
+                </a>
+              </div>
             </div>
           </div>
-          <p className="title"><b>Иргэдийн оролцоо бүхий хуулиудын жагсаалт</b></p>
+          <p className="title">
+            <b>Иргэдийн оролцоо бүхий хуулиудын жагсаалт</b>
+          </p>
           <p>
             2016 оны 2 сарын 4-ний байдлаар Монгол улсад нийт 459 хууль хүчин
             төгөлдөр үйлчилж байгаагаас 105 хуульд (нийт хуулийн дөрөвний нэг
@@ -68,10 +78,12 @@ export const Kbase = () => {
           </p>
           <div className="files lastFile">
             <h4>Баримт, бичиг</h4>
-            <img src="#" alt="PDF" />
-            <a href="test_file.zip" download>
-              Иргэдийн оролцоо бүхий хуулиудын жагсаалт
-            </a>
+            <div className="center">
+              <img src="#" alt="PDF" />
+              <a href="#" download>
+                Иргэдийн оролцоо бүхий хуулиудын жагсаалт
+              </a>
+            </div>
           </div>
           <div className="line bottom"></div>
         </div>
