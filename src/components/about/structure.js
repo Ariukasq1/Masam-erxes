@@ -1,5 +1,28 @@
 import React from "react";
+import { Row, Col } from "antd";
 
 export const Structure = () => {
-  return <div>Structure</div>;
+  return (
+    <Row className="structure">
+      <Col span={16}>
+        <h3>Төслийн бүрэлдхүүн хэсэг:</h3>
+        <p>
+          1. Хамтын ажилллагаанд суурилсан нийгмийн эгэх хариуцлагын үйл явцыг
+          бэхжүүлэхэд МХТ-ийг өргөнөөр ашиглах
+        </p>
+        <p>
+          2. Төсвийн хуваарилалт, төрийн үйлчилгээнд оролцоот хяналт-шинжилгээ
+          хийх чиглэлээр чадавхжуулах
+        </p>
+        <p>
+          3. Бодлогын түвшинд институцийн уялдаа холбоо, чадавхийг нэмэгдүүлэх
+        </p>
+        <p>4. Мэдлэг, туршлагаа нутагшуулан өргөжүүлэх</p>
+      </Col>
+      <Col span={8}></Col>
+      <div className="image">
+        <img src="images/about/structure.png" />
+      </div>
+    </Row>
+  );
 };

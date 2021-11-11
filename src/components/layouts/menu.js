@@ -70,6 +70,14 @@ class MenuComponent extends React.Component {
             <p>Мэдлэгийн сан</p>
           </a>
         </Link>
+        <Link href="/projects">
+          <a
+            className={`${activePage === 5 ? "active" : ""}`}
+            onClick={() => this.setState({ activePage: 5 })}
+          >
+            <p>Төслүүд</p>
+          </a>
+        </Link>
       </Row>
     );
   }
