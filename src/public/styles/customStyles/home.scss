@@ -1,12 +1,6 @@
 .introduction {
   background: linear-gradient(129.98deg, #3d57bd 13.8%, #1d307b 90.93%);
   div {
-    img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      object-position: center;
-    }
     &:first-child {
       padding: 125px 84px 125px 229px;
       h2,
@@ -29,9 +23,11 @@
         font-weight: bold;
         padding: 16px 24px 16px 28px;
         background-color: #ffffff;
-        border-color: #1d307b;
+        border: 1px solid #1d307b;
         border-radius: 8px;
-        box-sizing: border-box;
+        &:hover {
+          cursor: pointer;
+        }
       }
     }
   }
@@ -113,12 +109,6 @@
     width: 480px;
     height: 685px;
     background-color: #1f2933;
-    img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      object-position: center;
-    }
   }
 }
 .range {

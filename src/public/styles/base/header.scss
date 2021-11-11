@@ -3,11 +3,27 @@
   line-height: 0;
   padding: 24px;
   position: fixed;
+  align-items: flex-end;
   width: 100%;
   z-index: 999;
   box-shadow: 0px 16px 24px rgba(0, 0, 0, 0.06), 0px 2px 6px rgba(0, 0, 0, 0.04),
     0px 0px 1px rgba(0, 0, 0, 0.04);
-  .logo img {
-    width: 120px;
+  .logo {
+    margin-right: 64px;
+  }
+  a {
+    margin-right: 24px;
+    p {
+      color: #616e7c;
+      line-height: 24px;
+      margin-bottom: 0;
+    }
+    &.active {
+      p {
+        border-bottom: 2px solid #1d307b;
+        font-weight: bold;
+        color: #1d307b;
+      }
+    }
   }
 }

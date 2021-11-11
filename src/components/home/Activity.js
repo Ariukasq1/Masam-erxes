@@ -9,7 +9,7 @@ export const Activity = () => {
       <Row>
         <Col span={18}>
           <div>
-            <img src="images/image3.png" />
+            <img src="images/home/image3.png" />
           </div>
           <p>Анхан шатны арүүл мэндийн үйлчилгээг мргэдэд ойртуулах нь</p>
           <p>
@@ -25,7 +25,7 @@ export const Activity = () => {
         <Col span={6}></Col>
       </Row>
       <div className="image">
-        <img src="images/absolute1.png" />
+        <img src="images/home/absolute1.png" />
       </div>
     </div>
   );

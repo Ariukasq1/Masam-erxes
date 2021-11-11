@@ -1,0 +1,45 @@
+.IntroAbout {
+  background-color: #bddadb;
+  .ant-col-14 {
+    padding: 237px 100px 237px 229px;
+    h2 {
+      margin-bottom: 32px;
+      line-height: 46px;
+      letter-spacing: 0.25px;
+      font-weight: bold;
+    }
+    p {
+      color: #616e7c;
+      line-height: 24px;
+      text-align: justify;
+      letter-spacing: 0.15px;
+      margin: 0;
+    }
+  }
+}
+.target {
+  margin: 131px 342px;
+  justify-content: space-between;
+  align-items: center;
+  .ant-col-16 {
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+  .ant-col-7 {
+    h2 {
+      margin-bottom: 40px;
+      line-height: 46px;
+      letter-spacing: 0.25px;
+      font-weight: 700;
+      color: #1d307b;
+    }
+    p {
+      color: #1d307b;
+      line-height: 28px;
+      margin: 0;
+      text-align: justify;
+    }
+  }
+}

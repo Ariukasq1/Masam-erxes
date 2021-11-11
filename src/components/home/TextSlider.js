@@ -10,10 +10,10 @@ export default class TextSlider extends Component {
           Төслийн хэрэгжилтийг дэмжих зорилгоор дотоодын түншлэлийг бий болгох
         </p>
         <div>
-          <img src="images/tunsh1.png" />
-          <img src="images/tunsh2.png" />
-          <img src="images/tunsh3.png" />
-          <img src="images/tunsh4.png" />
+          <img src="images/home/tunsh1.png" />
+          <img src="images/home/tunsh2.png" />
+          <img src="images/home/tunsh3.png" />
+          <img src="images/home/tunsh4.png" />
         </div>
       </div>
     );
