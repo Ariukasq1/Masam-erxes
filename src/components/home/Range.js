@@ -1,10 +1,23 @@
 import { Row, Col } from "antd";
-import React from "react";
+import React, { useEffect } from "react";
 
 export const Range = () => {
+  useEffect(() => {
+    const text = document.querySelector(".circleText");
+    text.innerHTML = text.textContent.replace(/\S/g, "<span>$&</span>");
+    const element = text.querySelectorAll("span");
+    for (let i = 0; i < element.length; i++) {
+      element[i].style.transform = "rotate(" + i * 9.4 + "deg)";
+    }
+  });
   return (
     <Row className="range">
-      <div>Хэрэгжилтийн цар хүрээний товч мэдээлэл</div>
+      <section>
+        <p className="circleText">
+          Хэрэгжилтийн # цар хүрээний # товч # мэдээлэл
+        </p>
+        <div className="circleCenter"></div>
+      </section>
       <div>
         <h1>21</h1>
         <p>Аймаг</p>
