@@ -52,7 +52,7 @@ ul {
   list-style: none;
 }
 ul li {
-  margin-bottom: calc(1.75rem / 2);
+  margin-bottom: 0.875rem;
 }
 
 a {
@@ -602,6 +602,9 @@ img {
 }
 
 .div-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 1342px;
   padding: 4px;
   margin-bottom: 44px;
@@ -720,6 +723,19 @@ img {
 
 .lastBox {
   margin-bottom: 57px;
+}
+
+.proj {
+  margin-left: 233px;
+}
+
+.img {
+  height: 305px;
+  width: 1342px;
+}
+
+.img img {
+  object-fit: none;
 }
 
 .IntroAbout {
