@@ -6,6 +6,7 @@ import TextSlider from "../components/home/TextSlider";
 import { Introduction } from "../components/home/Introduction";
 import { Activity } from "../components/home/Activity";
 import { Range } from "../components/home/Range";
+import { MasamToNews } from "../components/home/MasamToNews";
 
 // const wp = new WPAPI({ endpoint: Config.apiUrl });
 
@@ -28,6 +29,7 @@ class Index extends React.Component {
           <TextSlider />
           <Activity />
           <Range />
+          <MasamToNews />
         </div>
       </Layout>
     );
