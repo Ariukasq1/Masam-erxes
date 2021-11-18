@@ -3,15 +3,15 @@ import { ArrowRightOutlined } from "@ant-design/icons";
 import React from "react";
 import Link from "next/link";
 
-export const Introduction = () => {
+export const Introduction = ({ introduction }) => {
+  console.log(introduction, "==========");
   return (
     <Row className="introduction">
       <Col span={12}>
-        <p>МАСАМ төслийн хоёр дахь үе шат</p>
-        <h2>
-          Монгол Улсад ил тод байдал, оролцоог сайжруулахын төлөө нийгмийн эгэх
-          хариуцлагыг уялдуулах нь
-        </h2>
+        <p>{introduction.title.rendered}</p>
+        <div
+          dangerouslySetInnerHTML={{ __html: introduction.content.rendered }}
+        />
         <Link href="/about">
           <a>
             <button>

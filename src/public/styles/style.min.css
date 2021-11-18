@@ -406,19 +406,16 @@ footer div:last-child span {
 .introduction div:first-child {
   padding: 125px 84px 125px 229px;
 }
-.introduction div:first-child h2,
 .introduction div:first-child p {
   color: #ffffff;
-}
-.introduction div:first-child h2 {
   margin-top: 0;
+  margin-bottom: 7px;
+}
+.introduction div:first-child > div p {
   margin-bottom: 40px;
   font-weight: 700;
   line-height: 46px;
-}
-.introduction div:first-child p {
-  margin-top: 0;
-  margin-bottom: 7px;
+  font-size: 34px;
 }
 .introduction div:first-child button {
   color: #1d307b;
