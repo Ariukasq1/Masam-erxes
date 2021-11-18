@@ -1,0 +1,51 @@
+.partners {
+  margin-left: 6%;
+  width: 100%;
+}
+.partners h2 {
+  color: #1d307b;
+  margin-top: 68px;
+}
+.boxContainer {
+  display: flex;
+  width: 100%;
+}
+.bigBox {
+  width: 659.5px;
+  height: 400px;
+  background-color: #f5f5f5;
+  border-top: 6px solid #1d307b;
+  margin-right: 24px;
+  margin-bottom: 24px;
+  padding: 40px;
+}
+.headPic {
+  object-fit: none;
+  height: 100px;
+  width: 220px;
+  margin-bottom: 20px;
+}
+.nextButton {
+  float: right;
+  display: flex;
+  margin-top: 60px;
+}
+.nextButton p{
+    margin-right: 8px;
+}
+.nextButton img{
+    width: 56px;
+    height: 56px;
+}
+.smallBox {
+  margin-right: 24px;
+  margin-bottom: 24px;
+  background-color: #f5f5f5;
+  border-top: 6px solid #1d307b;
+  width: 431.67px;
+  height: 400px;
+  padding: 40px;
+}
+.lastBox{
+    margin-bottom: 57px;
+}

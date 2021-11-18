@@ -1,0 +1,41 @@
+.newsList {
+  padding: 120px 228px 0 228px;
+
+  .headerNews {
+    margin-bottom: 116px;
+    justify-content: space-between;
+    align-items: flex-end;
+    h1 {
+      margin-bottom: 0;
+      font-weight: 700;
+      width: 593px;
+      line-height: 68.73px;
+      letter-spacing: -0.5px;
+    }
+    .ant-btn {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 18px;
+      font-weight: 700;
+      height: 56px;
+      width: 176px;
+      background: rgba(29, 48, 123, 1);
+      color: rgba(255, 255, 255, 0.95);
+    }
+  }
+}
+.ant-dropdown-menu {
+  li {
+    font-size: 18px;
+    font-weight: 700;
+    height: 56px;
+    width: 176px;
+    color: rgba(29, 48, 123, 1);
+    span {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+}
