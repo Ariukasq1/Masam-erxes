@@ -7,33 +7,34 @@ import { Introduction } from "../components/home/Introduction";
 import { Activity } from "../components/home/Activity";
 import { Range } from "../components/home/Range";
 import { MasamToNews } from "../components/home/MasamToNews";
+import { Actions } from "../components/home/Actions";
 
-// const wp = new WPAPI({ endpoint: Config.apiUrl });
+const wp = new WPAPI({ endpoint: Config.apiUrl });
 
-class Index extends React.Component {
-  // static async getInitialProps() {
-  //   let apiMethod = wp.categories();
+const Index = ({ introduction }) => {
+  return (
+    <Layout>
+      <div className="page home">
+        <Introduction introduction={introduction} />
+        <TextSlider />
+        <Activity />
+        <Range />
+        <MasamToNews />
+        <Actions />
+      </div>
+    </Layout>
+  );
+};
 
-  //   const mainTabCategory = await apiMethod
-  //     .parent(21)
-  //     .embed();
-
-  //   return { mainTabCategory };
-  // }
-
-  render() {
-    return (
-      <Layout>
-        <div className="page home">
-          <Introduction />
-          <TextSlider />
-          <Activity />
-          <Range />
-          <MasamToNews />
-        </div>
-      </Layout>
-    );
-  }
-}
+Index.getInitialProps = async () => {
+  const introduction = await wp
+    .posts()
+    .slug("introduction")
+    .embed()
+    .then((data) => {
+      return data[0];
+    });
+  return { introduction };
+};
 
 export default Index;

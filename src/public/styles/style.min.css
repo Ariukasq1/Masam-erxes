@@ -52,7 +52,7 @@ ul {
   list-style: none;
 }
 ul li {
-  margin-bottom: 0.875rem;
+  margin-bottom: calc(1.75rem / 2);
 }
 
 a {
@@ -599,6 +599,46 @@ footer div:last-child span {
   color: #1d307b;
   background-color: whitesmoke;
   box-shadow: none;
+}
+
+.calendar .titleCalendar {
+  width: 100%;
+  padding: 103px 228px;
+  background: linear-gradient(129.98deg, #3d57bd 13.8%, #1d307b 90.93%);
+}
+.calendar .titleCalendar h1 {
+  width: 962px;
+  font-weight: 700;
+  line-height: 56px;
+  letter-spacing: -0.5px;
+  color: white;
+  margin-bottom: 0;
+}
+.calendar .titleCalendar h1 h2 {
+  font-size: 48px;
+  font-weight: 700;
+  color: white;
+  line-height: 56px;
+  letter-spacing: -0.5px;
+  margin-bottom: 0;
+}
+.calendar .bodyCalendar {
+  padding: 47px 228px 121px 228px;
+}
+.calendar .bodyCalendar h1 {
+  font-weight: 700;
+  margin-bottom: 0;
+}
+.calendar .bodyCalendar p {
+  color: #616e7c;
+  margin-top: 20px;
+  margin-bottom: 34px;
+}
+.calendar .bodyCalendar .ant-col-8 > div {
+  width: 430px;
+  height: 490px;
+  padding: 85px 46px;
+  box-shadow: 0px 30px 84px rgba(19, 10, 46, 0.08), 0px 8px 32px rgba(19, 10, 46, 0.07), 0px 3px 14px rgba(19, 10, 46, 0.03), 0px 1px 3px rgba(19, 10, 46, 0.13);
 }
 
 h1 {
