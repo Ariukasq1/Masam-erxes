@@ -1,6 +1,4 @@
 import React from "react";
-import axios from "axios";
-import Config from "../../config";
 import Link from "next/link";
 import { Row } from "antd";
 
@@ -8,18 +6,6 @@ class MenuComponent extends React.Component {
   constructor(props) {
     super(props);
     this.state = { headerMenu: [], activePage: 0 };
-  }
-
-  componentDidMount() {
-    axios
-      .get(`${Config.apiUrl}/menus/v1/menus/header-menu`)
-      .then((res) =>
-        this.setState({
-          headerMenu: res.data,
-          loading: true,
-        })
-      )
-      .catch((err) => console.log(err));
   }
 
   render() {

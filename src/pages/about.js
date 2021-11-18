@@ -8,15 +8,13 @@ import { Target } from "../components/about/target";
 
 const About = () => {
   return (
-    <Layout>
-      <div className="page about">
-        <IntroAbout />
-        <Target />
-        <Structure />
-        <Clients />
-        <Direction />
-      </div>
-    </Layout>
+    <div className="page about">
+      <IntroAbout />
+      <Target />
+      <Structure />
+      <Clients />
+      <Direction />
+    </div>
   );
 };
 export default About;

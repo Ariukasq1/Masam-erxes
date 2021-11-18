@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700;900&display=swap");
 body,
 h1,
 h2,
@@ -12,17 +13,23 @@ label,
 input,
 textarea,
 li {
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  font-family: "Rubik", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans",
+    "Helvetica Neue", sans-serif;
 }
 
 html {
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  font-family: "Rubik", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans",
+    "Helvetica Neue", sans-serif;
 }
 
 body {
   margin: 0;
   color: $text-color;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  font-family: "Rubik", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans",
+    "Helvetica Neue", sans-serif;
   word-wrap: break-word;
   font-kerning: normal;
   line-height: 1.75;
@@ -69,7 +76,7 @@ hr {
   margin: 30px 0;
   border: 0;
   border-top: 1px solid $color-white;
-  opacity: .5;
+  opacity: 0.5;
 }
 
 [class^="flaticon-"]:before,
@@ -208,11 +215,11 @@ hr {
 
 //no-spacing
 .no-margin {
-  margin: 0
+  margin: 0;
 }
 
 .no-padding {
-  padding: 0
+  padding: 0;
 }
 
 .no-border {

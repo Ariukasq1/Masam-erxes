@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700;900&display=swap");
 body,
 h1,
 h2,
@@ -12,17 +13,17 @@ label,
 input,
 textarea,
 li {
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  font-family: "Rubik", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
 }
 
 html {
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  font-family: "Rubik", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
 }
 
 body {
   margin: 0;
   color: #2d343e;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  font-family: "Rubik", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   word-wrap: break-word;
   font-kerning: normal;
   line-height: 1.75;
@@ -400,24 +401,24 @@ footer div:last-child span {
     transform: rotate(360deg);
   }
 }
-.introduction {
+.home .introduction {
   background: linear-gradient(129.98deg, #3d57bd 13.8%, #1d307b 90.93%);
 }
-.introduction div:first-child {
+.home .introduction div:first-child {
   padding: 125px 84px 125px 229px;
 }
-.introduction div:first-child p {
+.home .introduction div:first-child p {
   color: #ffffff;
   margin-top: 0;
   margin-bottom: 7px;
 }
-.introduction div:first-child > div p {
+.home .introduction div:first-child > div p {
   margin-bottom: 40px;
   font-weight: 700;
   line-height: 46px;
   font-size: 34px;
 }
-.introduction div:first-child button {
+.home .introduction div:first-child button {
   color: #1d307b;
   font-size: 18px;
   font-weight: bold;
@@ -426,11 +427,13 @@ footer div:last-child span {
   border: 1px solid #1d307b;
   border-radius: 8px;
 }
-.introduction div:first-child button:hover {
+.home .introduction div:first-child button:hover {
   cursor: pointer;
 }
-
-.slider .flowing {
+.home .slick-slider {
+  margin-bottom: 95px;
+}
+.home .slick-slider .slick-list .slick-track > div .text {
   font-size: 140px;
   font-style: normal;
   font-weight: bold;
@@ -439,17 +442,7 @@ footer div:last-child span {
   opacity: 0.5;
   color: #1d307b;
 }
-.slider .partners-logo {
-  display: flex;
-  justify-content: space-between;
-  margin: 0 229px 138px 229px;
-  height: 97px;
-}
-.slider .partners-logo img {
-  object-fit: contain;
-  width: max-content;
-}
-.slider h3 {
+.home h3 {
   display: table;
   color: #1d307b;
   margin-top: 29px;
@@ -460,54 +453,42 @@ footer div:last-child span {
   background: rgba(29, 48, 123, 0.12);
   border-radius: 66px;
 }
-.slider h1 {
-  margin-left: 229px;
-  width: 580px;
-  font-weight: 700;
-  line-height: 68px;
-}
-.slider p {
-  margin: 23px 229px 20px 229px;
-  padding-bottom: 20px;
-  border-bottom: 8px solid #cbd2d9;
-}
-
-.activity {
+.home .activity {
   position: relative;
 }
-.activity h2 {
+.home .activity h2 {
   margin-left: 229px;
   font-weight: bold;
   padding: 37px 0;
 }
-.activity .ant-row .ant-col-18 {
+.home .activity .ant-row .ant-col-18 {
   padding: 57px 400px 203px 229px;
   background-color: #bddadb;
 }
-.activity .ant-row .ant-col-18 p:nth-child(2) {
+.home .activity .ant-row .ant-col-18 p:nth-child(2) {
   width: 387px;
   line-height: 24px;
   font-weight: 700;
   margin-bottom: 49px;
   margin-top: 27px;
 }
-.activity .ant-row .ant-col-18 p:nth-child(3) {
-  line-height: 28px;
-  letter-spacing: 0.5px;
-  color: #616e7c;
-}
-.activity .ant-row .ant-col-18 > div {
+.home .activity .ant-row .ant-col-18 > div:first-child {
   display: table;
   padding: 16px 32px;
   background-color: #1f2933;
 }
-.activity .ant-row .ant-col-18 button {
+.home .activity .ant-row .ant-col-18 > div p {
+  line-height: 28px;
+  letter-spacing: 0.5px;
+  color: #616e7c;
+}
+.home .activity .ant-row .ant-col-18 button {
   margin-top: 58px;
 }
-.activity .ant-row .ant-col-6 {
+.home .activity .ant-row .ant-col-6 {
   background: linear-gradient(129.98deg, #3d57bd 13.8%, #1d307b 90.93%);
 }
-.activity .image {
+.home .activity .image {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -520,35 +501,67 @@ footer div:last-child span {
   height: 685px;
   background-color: #1f2933;
 }
-
-.range {
+.home .activity .image button {
+  top: 70%;
+  left: calc(100% + 25px);
+}
+.home .activity .image button:before {
+  font-size: 44px;
+  color: rgba(255, 255, 255, 0.4);
+}
+.home .activity .image .slick-next {
+  top: 80%;
+}
+.home .slider .partners-logo {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 229px 138px 229px;
+  height: 97px;
+}
+.home .slider .partners-logo img {
+  object-fit: contain;
+  width: max-content;
+}
+.home .slider h1 {
+  margin-left: 229px;
+  width: 590px;
+  font-weight: 700;
+  line-height: 68px;
+}
+.home .slider p {
+  color: #616e7c;
+  margin: 23px 229px 20px 229px;
+  padding-bottom: 20px;
+  border-bottom: 8px solid #cbd2d9;
+}
+.home .range {
   position: relative;
   padding: 146px 0;
 }
-.range > div {
+.home .range > div {
   margin-left: 120px;
 }
-.range > div h1 {
+.home .range > div h1 {
   margin-bottom: 4px;
   font-weight: 700;
   color: #1d307b;
   letter-spacing: -0.5px;
   line-height: 69px;
 }
-.range > div p {
+.home .range > div p {
   line-height: 24px;
   letter-spacing: 0.15px;
   color: #616e7c;
   margin: 0;
 }
-.range section {
+.home .range section {
   display: flex;
   align-items: center;
   position: relative;
   margin-left: 214px;
   margin-right: 197px;
 }
-.range section div {
+.home .range section div {
   position: absolute;
   left: -15px;
   height: 30px;
@@ -557,53 +570,87 @@ footer div:last-child span {
   background-color: #1d307b;
   border-radius: 50%;
 }
-.range section .circleText {
+.home .range section .circleText {
   margin: 0;
   box-sizing: border-box;
 }
-.range section .circleText span {
+.home .range section .circleText span {
   top: -50%;
   position: absolute;
   display: inline-block;
   transform-origin: 0 100px;
 }
-
-.masamToNews {
+.home .masamToNews {
   background-color: whitesmoke;
   padding: 100px 229px 147px 229px;
 }
-.masamToNews .headerTo {
+.home .masamToNews .headerTo {
   width: 100%;
   justify-content: space-between;
   align-items: flex-end;
   margin-bottom: 48px;
 }
-.masamToNews .headerTo h1 {
+.home .masamToNews .headerTo h1 {
   width: 700px;
   line-height: 68.73px;
   font-weight: 700;
   margin: 0;
 }
-.masamToNews .headerTo .ant-btn {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: none;
+.home .masamToNews .headerTo button {
   border: none;
-  padding: 24px 38px;
+  background-color: none;
+  margin: 24px 38px;
   font-size: 18px;
   font-weight: 700;
   color: #1d307b;
   background-color: whitesmoke;
   box-shadow: none;
 }
-
-.calendar .titleCalendar {
+.home .masamToNews .headerTo button:hover {
+  cursor: pointer;
+  background-color: #1d307b;
+  color: white;
+}
+.home .masamToNews .newsTo {
+  width: 100%;
+}
+.home .masamToNews .newsTo .ant-col-12:first-child {
+  height: 659px;
+}
+.home .masamToNews .newsTo .ant-col-12:first-child div {
+  background: #ffffff;
+  width: 100%;
+  height: 100%;
+  border-top: 8px solid #1f2933;
+}
+.home .masamToNews .newsTo .ant-col-12 .ant-row {
+  width: 100%;
+}
+.home .masamToNews .newsTo .ant-col-12 .ant-row .ant-col-12 {
+  height: 320px;
+  margin-bottom: 17px;
+}
+.home .masamToNews .newsTo .ant-col-12 .ant-row .ant-col-12 div {
+  background: #ffffff;
+  width: 100%;
+  height: 100%;
+  border-top: 8px solid #1f2933;
+}
+.home .masamToNews .newsTo .ant-col-12 .ant-row .ant-col-24 {
+  height: 320px;
+}
+.home .masamToNews .newsTo .ant-col-12 .ant-row .ant-col-24 div {
+  background: #ffffff;
+  width: 100%;
+  height: 100%;
+  border-top: 8px solid #1f2933;
+}
+.home .calendar .titleCalendar {
   width: 100%;
   padding: 103px 228px;
   background: linear-gradient(129.98deg, #3d57bd 13.8%, #1d307b 90.93%);
 }
-.calendar .titleCalendar h1 {
+.home .calendar .titleCalendar h1 {
   width: 962px;
   font-weight: 700;
   line-height: 56px;
@@ -611,7 +658,7 @@ footer div:last-child span {
   color: white;
   margin-bottom: 0;
 }
-.calendar .titleCalendar h1 h2 {
+.home .calendar .titleCalendar h1 h2 {
   font-size: 48px;
   font-weight: 700;
   color: white;
@@ -619,21 +666,58 @@ footer div:last-child span {
   letter-spacing: -0.5px;
   margin-bottom: 0;
 }
-.calendar .bodyCalendar {
-  padding: 47px 228px 121px 228px;
+.home .calendar .bodyCalendar {
+  width: 100%;
+  position: relative;
+  padding: 0 228px 121px 228px;
 }
-.calendar .bodyCalendar h1 {
+.home .calendar .bodyCalendar h1 {
+  margin-top: 47px;
   font-weight: 700;
   margin-bottom: 0;
 }
-.calendar .bodyCalendar p {
+.home .calendar .bodyCalendar p {
   color: #616e7c;
   margin-top: 20px;
   margin-bottom: 34px;
 }
-.calendar .bodyCalendar .ant-col-8 > div {
-  width: 430px;
+.home .calendar .bodyCalendar .ant-col-16 .slick-slider {
+  margin-bottom: 0;
+  position: relative;
+}
+.home .calendar .bodyCalendar .ant-col-16 .slick-slider button {
+  top: -70px;
+  position: absolute;
+  left: calc(100% - 100px);
+}
+.home .calendar .bodyCalendar .ant-col-16 .slick-slider button::before {
+  color: #616e7c;
+  font-size: 44px;
+}
+.home .calendar .bodyCalendar .ant-col-16 .slick-slider .slick-prev {
+  left: calc(100% - 154px);
+}
+.home .calendar .bodyCalendar .ant-col-16 .slick-slider .slick-list .slick-track .slick-slide > div {
+  width: 431px;
+  height: 244px;
+}
+.home .calendar .bodyCalendar .ant-col-16 .slick-slider .slick-list .slick-track .slick-slide > div > div {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.5) 100%);
+}
+.home .calendar .bodyCalendar .ant-col-16 .slick-slider .slick-list .slick-track .slick-slide > div > div img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+.home .calendar .bodyCalendar .ant-col-8 {
   height: 490px;
+}
+.home .calendar .bodyCalendar .ant-col-8 > div {
+  width: 100%;
+  height: 100%;
   padding: 85px 46px;
   box-shadow: 0px 30px 84px rgba(19, 10, 46, 0.08), 0px 8px 32px rgba(19, 10, 46, 0.07), 0px 3px 14px rgba(19, 10, 46, 0.03), 0px 1px 3px rgba(19, 10, 46, 0.13);
 }

@@ -1,14 +1,11 @@
-import Layout from "../components/layouts/Layout";
 import React from "react";
 import { NewsList } from "../components/news";
 
 const News = () => {
   return (
-    <Layout>
-      <div className="page news">
-        <NewsList />
-      </div>
-    </Layout>
+    <div className="page news">
+      <NewsList />
+    </div>
   );
 };
 export default News;

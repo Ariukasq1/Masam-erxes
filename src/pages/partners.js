@@ -4,11 +4,9 @@ import { Partner } from "../components/partners/Partners";
 
 const Partners = () => {
   return (
-    <Layout>
-      <div className="page partners">
-        <Partner />
-      </div>
-    </Layout>
+    <div className="page partners">
+      <Partner />
+    </div>
   );
 };
 export default Partners;

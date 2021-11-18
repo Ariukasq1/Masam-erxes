@@ -3,11 +3,9 @@ import React from "react";
 import { Kbase } from "../components/knowledgeBase/Kbase";
 const Knowledgebase = () => {
   return (
-    <Layout>
-      <div className="page knowledgebase">
-        <Kbase/>
-      </div>
-    </Layout>
+    <div className="page knowledgebase">
+      <Kbase />
+    </div>
   );
 };
 export default Knowledgebase;

@@ -4,11 +4,9 @@ import { Proj } from "../components/projects/Proj";
 
 const Projects = () => {
   return (
-    <Layout>
-      <div className="page projects">
-        <Proj />
-      </div>
-    </Layout>
+    <div className="page projects">
+      <Proj />
+    </div>
   );
 };
 export default Projects;
