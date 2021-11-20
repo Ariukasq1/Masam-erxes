@@ -2,9 +2,10 @@ import { Row, Col } from "antd";
 import React from "react";
 import { ArrowRightOutlined } from "@ant-design/icons";
 import Slider from "react-slick";
+import { getData } from "../../utils";
 
-export const Activity = ({ activity }) => {
-  const { title, content } = activity;
+export const Activity = ({ activity, activityCat, activityGallery }) => {
+  const { title, content, acf } = activity;
   const settings = {
     infinite: true,
     slidesToShow: 1,
@@ -15,25 +16,28 @@ export const Activity = ({ activity }) => {
     cssEase: "linear",
   };
   return (
-    <div className="activity">
-      <h2>Төслийн гол үйл ажиллагаа</h2>
+    <Col span={24} className="activity">
+      <h2>{activityCat.name}</h2>
       <Row>
         <Col span={18}>
           <div>
-            <img src="images/home/image3.png" />
+            <img src={getData(activity._embedded, "image")} />
           </div>
           <p>{title.rendered}</p>
           <div dangerouslySetInnerHTML={{ __html: content.rendered }} />
-          <button className="readMore">
-            Дэлгэрэнгүй <ArrowRightOutlined />
-          </button>
+          <a href={acf.link}>
+            <button className="readMore">
+              Дэлгэрэнгүй <ArrowRightOutlined />
+            </button>
+          </a>
         </Col>
         <Col span={6}></Col>
       </Row>
-      <Slider {...settings} className="image">
-        <img src="images/home/absolute1.png" />
-        <img src="images/home/absolute1.png" />
+      <Slider {...settings} className="activitySlider">
+        {activityGallery.map((img, ind) => {
+          return <img key={ind} src={getData(img._embedded, "image")} />;
+        })}
       </Slider>
-    </div>
+    </Col>
   );
 };

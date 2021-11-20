@@ -7,6 +7,7 @@ import "antd/dist/antd.css";
 import Layout from "../components/layouts/Layout";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import ReactPlayer from "react-player";
 
 Router.events.on("routeChangeStart", () => {
   NProgress.start();

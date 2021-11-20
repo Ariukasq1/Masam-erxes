@@ -5,7 +5,10 @@ import { Row } from "antd";
 class MenuComponent extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { headerMenu: [], activePage: 0 };
+    this.state = {
+      headerMenu: [],
+      activePage: 0,
+    };
   }
 
   render() {
@@ -13,9 +16,13 @@ class MenuComponent extends React.Component {
 
     return (
       <Row className="main-header">
-        <div className="logo">
-          <img src="images/home/masamLogo.png" />
-        </div>
+        <Link href="/">
+          <a>
+            <div className="logo">
+              <img src="images/home/masamLogo.png" />
+            </div>
+          </a>
+        </Link>
         <Link href="/">
           <a
             className={`${activePage === 0 ? "active" : ""}`}
@@ -62,6 +69,14 @@ class MenuComponent extends React.Component {
             onClick={() => this.setState({ activePage: 5 })}
           >
             <p>Төслүүд</p>
+          </a>
+        </Link>
+        <Link href="/contact">
+          <a
+            className={`${activePage === 6 ? "active" : ""}`}
+            onClick={() => this.setState({ activePage: 6 })}
+          >
+            <p>Холбоо барих</p>
           </a>
         </Link>
       </Row>

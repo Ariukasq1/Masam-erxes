@@ -1,0 +1,25 @@
+.contact {
+  width: 100%;
+  background: rgba(189, 218, 219, 1);
+  padding: 232px 229px 100px 229px;
+  .ant-col-6 {
+    padding-right: 25px;
+    > h4 {
+      color: #1d307b;
+      font-weight: 700;
+    }
+    > p {
+      color: #616e7c;
+    }
+    .socialLinks {
+      font-size: 22px;
+      color: #616e7c;
+      > span {
+        margin-right: 10px;
+        border: 1px solid #616e7c;
+        border-radius: 50%;
+        padding: 12px;
+      }
+    }
+  }
+}

@@ -1,8 +1,11 @@
 import { Row, Col, Calendar } from "antd";
 import React from "react";
 import Slider from "react-slick";
+import { getData } from "../../utils";
 
-export const Actions = () => {
+export const Actions = ({ actionsTitle, actionsCat, actionsPosts }) => {
+  const { content, title } = actionsTitle;
+  const { name, description } = actionsCat;
   const settings = {
     infinite: true,
     slidesToShow: 2,
@@ -10,37 +13,35 @@ export const Actions = () => {
     autoplay: true,
     speed: 2000,
     autoplaySpeed: 8000,
-    cssEase: "linear",
   };
   return (
-    <Row className="calendar">
-      <Row className="titleCalendar">
-        <h1>
-          НИЙГМИЙН ЭРГЭХ ХАРИУЦЛАГА УЛААНБААТАР ХОТОД <h2>2021.11.11</h2>
-        </h1>
-      </Row>
+    <Col span={24} className="calendar">
+      <Col span={24} className="calTitle">
+        <h1>{title.rendered}</h1>
+        <div dangerouslySetInnerHTML={{ __html: content.rendered }} />
+      </Col>
       <Row className="bodyCalendar">
         <Col span={16}>
-          <h1>Арга хэмжээ</h1>
-          <p>
-            Төслийн хэрэгжилтийг дэмжих зорилгоор дотоодын түншлэлийг бий болгох
-          </p>
-          <Slider {...settings}>
-            <div>hello</div>
-            <div>
-              <img src="images/about/client.png" />
-            </div>
-            <div>
-              <img src="images/about/client.png" />
-            </div>
+          <h1>{name}</h1>
+          <p>{description}</p>
+          <Slider {...settings} className="actionsSlider">
+            {actionsPosts.map((post, index) => {
+              return (
+                <div key={index} className="postActions">
+                  <img
+                    className="overlayImage"
+                    src={getData(post._embedded, "image")}
+                  />
+                  <p className="overlayText">{post.title.rendered}</p>
+                </div>
+              );
+            })}
           </Slider>
         </Col>
         <Col span={8}>
-          <div>
-            <Calendar fullscreen={false} />
-          </div>
+          <Calendar fullscreen={false} />
         </Col>
       </Row>
-    </Row>
+    </Col>
   );
 };
