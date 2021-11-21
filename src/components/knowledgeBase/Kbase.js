@@ -112,38 +112,46 @@ export const Kbase = ({
       break;
     case "sudalgaa":
       menu = (
-        <div>
-          <p className="title">
-            <b>Увс</b>
-          </p>
-        </div>
+        <Collapse defaultActiveKey={["1"]} expandIconPosition={"right"} ghost>
+          <Panel
+            className="panel"
+            header="Судалгаа"
+            key="1"
+          ></Panel>
+        </Collapse>
       );
       break;
     case "surgalt":
       menu = (
-        <div>
-          <p className="title">
-            <b>Ховд</b>
-          </p>
-        </div>
+        <Collapse defaultActiveKey={["1"]} expandIconPosition={"right"} ghost>
+          <Panel
+            className="panel"
+            header="Сургалт"
+            key="1"
+          ></Panel>
+        </Collapse>
       );
       break;
     case "gariinAvlaga":
       menu = (
-        <div>
-          <p className="title">
-            <b>Увс</b>
-          </p>
-        </div>
+        <Collapse defaultActiveKey={["1"]} expandIconPosition={"right"} ghost>
+          <Panel
+            className="panel"
+            header="Гарийн авлага"
+            key="1"
+          ></Panel>
+        </Collapse>
       );
       break;
-    case "holbootoiTsahim":
+    case "holbootoiTsahimHuudsuud":
       menu = (
-        <div>
-          <p className="title">
-            <b>Хэнтий</b>
-          </p>
-        </div>
+        <Collapse defaultActiveKey={["1"]} expandIconPosition={"right"} ghost>
+          <Panel
+            className="panel"
+            header="Холбоотой цахим хуудсууд"
+            key="1"
+          ></Panel>
+        </Collapse>
       );
       break;
   }
@@ -180,11 +188,11 @@ export const Kbase = ({
             Гарын авлага
           </button>
           <button
-            className={state == "holbootoiTsahim" ? "clicked" : ""}
-            onClick={() => setState("holbootoiTsahim")}
+            className={state == "holbootoiTsahimHuudsuud" ? "clicked" : ""}
+            onClick={() => setState("holbootoiTsahimHuudsuud")}
             type="button"
           >
-            Холбоотой цахим
+            Холбоотой цахим хуудсууд
           </button>
         </div>
         {menu}
