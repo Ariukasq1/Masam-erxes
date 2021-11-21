@@ -4,13 +4,25 @@ import React from "react";
 
 export const MasamToNews = () => {
   return (
-    <Row className="masamToNews">
-      <Row className="headerTo">
-        <h1>MASAM II төслийн тухай мэдээ мэдээлэл</h1>
-        <Button>
-          Мэдээ <ArrowRightOutlined />
-        </Button>
-      </Row>
+    <Row className="newsTo" gutter={16}>
+      <Col span={12}>
+        <div></div>
+      </Col>
+      <Col span={12}>
+        <Row gutter={16}>
+          <Col span={12}>
+            <div></div>
+          </Col>
+          <Col span={12}>
+            <div></div>
+          </Col>
+        </Row>
+        <Row gutter={16}>
+          <Col span={24}>
+            <div></div>
+          </Col>
+        </Row>
+      </Col>
     </Row>
   );
 };

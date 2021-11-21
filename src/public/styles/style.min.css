@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700;900&display=swap");
 body,
 h1,
 h2,
@@ -12,17 +13,17 @@ label,
 input,
 textarea,
 li {
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  font-family: "Rubik", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
 }
 
 html {
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  font-family: "Rubik", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
 }
 
 body {
   margin: 0;
   color: #2d343e;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  font-family: "Rubik", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   word-wrap: break-word;
   font-kerning: normal;
   line-height: 1.75;
@@ -401,23 +402,28 @@ footer div:last-child span {
   }
 }
 .introduction {
+  width: 100%;
+  height: 560px;
   background: linear-gradient(129.98deg, #3d57bd 13.8%, #1d307b 90.93%);
 }
-.introduction div:first-child {
+.introduction .ant-col-12 {
+  height: 100%;
+}
+.introduction .ant-col-12:first-child {
   padding: 125px 84px 125px 229px;
 }
-.introduction div:first-child p {
+.introduction .ant-col-12:first-child p {
   color: #ffffff;
   margin-top: 0;
   margin-bottom: 7px;
 }
-.introduction div:first-child > div p {
+.introduction .ant-col-12:first-child p:last-child {
   margin-bottom: 40px;
   font-weight: 700;
   line-height: 46px;
   font-size: 34px;
 }
-.introduction div:first-child button {
+.introduction .ant-col-12:first-child button {
   color: #1d307b;
   font-size: 18px;
   font-weight: bold;
@@ -426,50 +432,15 @@ footer div:last-child span {
   border: 1px solid #1d307b;
   border-radius: 8px;
 }
-.introduction div:first-child button:hover {
+.introduction .ant-col-12:first-child button:hover {
   cursor: pointer;
+  border: 1px solid #ffffff;
 }
-
-.slider .flowing {
-  font-size: 140px;
-  font-style: normal;
-  font-weight: bold;
-  line-height: 166px;
-  letter-spacing: -1.5px;
-  opacity: 0.5;
-  color: #1d307b;
-}
-.slider .partners-logo {
-  display: flex;
-  justify-content: space-between;
-  margin: 0 229px 138px 229px;
-  height: 97px;
-}
-.slider .partners-logo img {
-  object-fit: contain;
-  width: max-content;
-}
-.slider h3 {
-  display: table;
-  color: #1d307b;
-  margin-top: 29px;
-  margin-left: 229px;
-  margin-bottom: 12px;
-  font-weight: 700;
-  padding: 24px 32px;
-  background: rgba(29, 48, 123, 0.12);
-  border-radius: 66px;
-}
-.slider h1 {
-  margin-left: 229px;
-  width: 580px;
-  font-weight: 700;
-  line-height: 68px;
-}
-.slider p {
-  margin: 23px 229px 20px 229px;
-  padding-bottom: 20px;
-  border-bottom: 8px solid #cbd2d9;
+.introduction .ant-col-12 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
 }
 
 .activity {
@@ -480,26 +451,30 @@ footer div:last-child span {
   font-weight: bold;
   padding: 37px 0;
 }
+.activity .ant-row {
+  width: 100%;
+  height: 680px;
+}
 .activity .ant-row .ant-col-18 {
   padding: 57px 400px 203px 229px;
   background-color: #bddadb;
 }
-.activity .ant-row .ant-col-18 p:nth-child(2) {
+.activity .ant-row .ant-col-18 > p {
   width: 387px;
   line-height: 24px;
   font-weight: 700;
   margin-bottom: 49px;
   margin-top: 27px;
 }
-.activity .ant-row .ant-col-18 p:nth-child(3) {
-  line-height: 28px;
-  letter-spacing: 0.5px;
-  color: #616e7c;
-}
-.activity .ant-row .ant-col-18 > div {
+.activity .ant-row .ant-col-18 > div:first-child {
   display: table;
   padding: 16px 32px;
   background-color: #1f2933;
+}
+.activity .ant-row .ant-col-18 > div p {
+  line-height: 28px;
+  letter-spacing: 0.5px;
+  color: #616e7c;
 }
 .activity .ant-row .ant-col-18 button {
   margin-top: 58px;
@@ -507,7 +482,7 @@ footer div:last-child span {
 .activity .ant-row .ant-col-6 {
   background: linear-gradient(129.98deg, #3d57bd 13.8%, #1d307b 90.93%);
 }
-.activity .image {
+.activity .activitySlider {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -519,6 +494,17 @@ footer div:last-child span {
   width: 480px;
   height: 685px;
   background-color: #1f2933;
+}
+.activity .activitySlider button {
+  top: 70%;
+  left: calc(100% + 25px);
+}
+.activity .activitySlider button:before {
+  font-size: 44px;
+  color: rgba(255, 255, 255, 0.4);
+}
+.activity .activitySlider .slick-next {
+  top: 80%;
 }
 
 .range {
@@ -545,7 +531,7 @@ footer div:last-child span {
   display: flex;
   align-items: center;
   position: relative;
-  margin-left: 214px;
+  margin-left: 229px;
   margin-right: 197px;
 }
 .range section div {
@@ -568,74 +554,159 @@ footer div:last-child span {
   transform-origin: 0 100px;
 }
 
-.masamToNews {
+.calendar {
+  margin-bottom: 121px;
+}
+.calendar .calTitle {
+  height: 400px;
+  padding: 103px 229px;
+  background: linear-gradient(129.98deg, #3d57bd 13.8%, #1d307b 90.93%);
+}
+.calendar .calTitle h1 {
+  margin-bottom: 0;
+  line-height: 69px;
+  letter-spacing: -0.5px;
+  width: 962px;
+  font-weight: bold;
+  color: #ffffff;
+}
+.calendar .calTitle h2 {
+  color: #ffffff;
+  font-weight: 700;
+  margin-bottom: 0;
+}
+.calendar .bodyCalendar {
+  width: 100%;
+  position: relative;
+  padding: 0 229px;
+}
+.calendar .bodyCalendar .ant-col-16 > h1 {
+  margin-top: 47px;
+  font-weight: 700;
+  margin-bottom: 0;
+  line-height: 69px;
+}
+.calendar .bodyCalendar .ant-col-16 > p {
+  color: #616e7c;
+  margin-top: 20px;
+  margin-bottom: 34px;
+  line-height: 28px;
+}
+.calendar .bodyCalendar .ant-col-16 .actionsSlider .slick-list .slick-track .slick-slide > div {
+  margin-right: 24px;
+  margin-left: 1px;
+}
+.calendar .bodyCalendar .ant-col-16 .actionsSlider .slick-list .slick-track .slick-slide > div .postActions {
+  position: relative;
+  height: 244px;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.5) 100%);
+}
+.calendar .bodyCalendar .ant-col-16 .actionsSlider .slick-list .slick-track .slick-slide > div .postActions .overlayText {
+  position: absolute;
+  margin-bottom: 22px;
+  margin-left: 13px;
+  bottom: 0;
+  color: #ffffff;
+  font-weight: 700;
+  line-height: 24px;
+  letter-spacing: 0.15px;
+}
+.calendar .bodyCalendar .ant-col-8 {
+  position: relative;
+}
+.calendar .bodyCalendar .ant-col-8 .ant-picker-calendar {
+  position: absolute;
+  top: -48.5px;
+  height: 490px;
+  width: 431px;
+  padding: 85px 46px 96px 46px;
+  box-shadow: 0px 30px 84px rgba(19, 10, 46, 0.08), 0px 8px 32px rgba(19, 10, 46, 0.07), 0px 3px 14px rgba(19, 10, 46, 0.03), 0px 1px 3px rgba(19, 10, 46, 0.13);
+}
+
+.partnersList {
+  padding: 0 229px 0 229px;
+  margin-bottom: 95px;
+}
+.partnersList h1 {
+  width: 590px;
+  font-weight: 700;
+  line-height: 68.73px;
+  letter-spacing: -0.5px;
+}
+.partnersList > p {
+  color: #616e7c;
+  margin: 23px 0 20px 0;
+  padding-bottom: 20px;
+  border-bottom: 8px solid #cbd2d9;
+}
+.partnersList .slick-slider .slick-list .slick-track {
+  display: flex;
+  justify-content: space-between;
+}
+.partnersList .slick-slider .slick-list .slick-track .slick-slide {
+  width: max-content !important;
+}
+.partnersList .slick-slider .slick-list .slick-track .slick-slide > div {
+  display: table;
+}
+.partnersList .slick-slider .slick-list .slick-track .slick-slide > div img {
+  height: 97px;
+}
+
+.home > h3 {
+  display: table;
+  color: #1d307b;
+  margin-top: 29px;
+  margin-left: 229px;
+  margin-bottom: 12px;
+  font-weight: 700;
+  padding: 24px 32px;
+  background: rgba(29, 48, 123, 0.12);
+  border-radius: 66px;
+}
+.home .textSlider {
+  margin-bottom: 95px;
+}
+.home .textSlider .slick-list .slick-track > div .text {
+  text-transform: uppercase;
+  font-size: 140px;
+  font-style: normal;
+  font-weight: bold;
+  line-height: 166px;
+  letter-spacing: -1.5px;
+  opacity: 0.5;
+  color: #1d307b;
+}
+.home .masamToNews {
   background-color: whitesmoke;
   padding: 100px 229px 147px 229px;
+  height: 500px;
 }
-.masamToNews .headerTo {
+.home .masamToNews .headerTo {
   width: 100%;
   justify-content: space-between;
   align-items: flex-end;
-  margin-bottom: 48px;
 }
-.masamToNews .headerTo h1 {
-  width: 700px;
+.home .masamToNews .headerTo h1 {
+  width: 701px;
   line-height: 68.73px;
-  font-weight: 700;
-  margin: 0;
+  letter-spacing: -0.5px;
+  margin-bottom: 0;
 }
-.masamToNews .headerTo .ant-btn {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: none;
+.home .masamToNews .headerTo button {
   border: none;
-  padding: 24px 38px;
+  background-color: none;
+  margin: 24px 38px;
   font-size: 18px;
   font-weight: 700;
   color: #1d307b;
   background-color: whitesmoke;
   box-shadow: none;
 }
-
-.calendar .titleCalendar {
-  width: 100%;
-  padding: 103px 228px;
-  background: linear-gradient(129.98deg, #3d57bd 13.8%, #1d307b 90.93%);
-}
-.calendar .titleCalendar h1 {
-  width: 962px;
-  font-weight: 700;
-  line-height: 56px;
-  letter-spacing: -0.5px;
+.home .masamToNews .headerTo button:hover {
+  cursor: pointer;
+  background-color: #1d307b;
   color: white;
-  margin-bottom: 0;
-}
-.calendar .titleCalendar h1 h2 {
-  font-size: 48px;
-  font-weight: 700;
-  color: white;
-  line-height: 56px;
-  letter-spacing: -0.5px;
-  margin-bottom: 0;
-}
-.calendar .bodyCalendar {
-  padding: 47px 228px 121px 228px;
-}
-.calendar .bodyCalendar h1 {
-  font-weight: 700;
-  margin-bottom: 0;
-}
-.calendar .bodyCalendar p {
-  color: #616e7c;
-  margin-top: 20px;
-  margin-bottom: 34px;
-}
-.calendar .bodyCalendar .ant-col-8 > div {
-  width: 430px;
-  height: 490px;
-  padding: 85px 46px;
-  box-shadow: 0px 30px 84px rgba(19, 10, 46, 0.08), 0px 8px 32px rgba(19, 10, 46, 0.07), 0px 3px 14px rgba(19, 10, 46, 0.03), 0px 1px 3px rgba(19, 10, 46, 0.13);
 }
 
 h1 {
@@ -648,6 +719,10 @@ h2 {
 
 h3 {
   font-size: 24px;
+}
+
+h4 {
+  font-size: 20px;
 }
 
 p {
@@ -663,6 +738,11 @@ p {
   border-color: #1d307b;
   border-radius: 8px;
   box-sizing: border-box;
+}
+.readMore:hover {
+  cursor: pointer;
+  background-color: #ffffff;
+  color: #1d307b;
 }
 
 .page {
@@ -991,6 +1071,32 @@ img {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.contact {
+  width: 100%;
+  background: #bddadb;
+  padding: 232px 229px 100px 229px;
+}
+.contact .ant-col-6 {
+  padding-right: 25px;
+}
+.contact .ant-col-6 > h4 {
+  color: #1d307b;
+  font-weight: 700;
+}
+.contact .ant-col-6 > p {
+  color: #616e7c;
+}
+.contact .ant-col-6 .socialLinks {
+  font-size: 22px;
+  color: #616e7c;
+}
+.contact .ant-col-6 .socialLinks > span {
+  margin-right: 10px;
+  border: 1px solid #616e7c;
+  border-radius: 50%;
+  padding: 12px;
 }
 
 /*# sourceMappingURL=style.min.css.map */
