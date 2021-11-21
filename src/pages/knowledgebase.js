@@ -15,7 +15,6 @@ const Knowledgebase = ({
   barimtlast,
 }) => {
   return (
-    <Layout>
       <div className="page knowledgebase">
         <Kbase
           knowledgeBase={knowledgeBase}
@@ -26,7 +25,6 @@ const Knowledgebase = ({
           barimtlast={barimtlast}
         />
       </div>
-    </Layout>
   );
 };
 

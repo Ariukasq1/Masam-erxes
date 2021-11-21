@@ -759,12 +759,18 @@ img {
 .kbase {
   padding: 40px 229px 62px 229px;
 }
+.kbase .panel .ant-collapse-header {
+  font-size: 20px;
+  font-weight: bold;
+  border-bottom: 1px solid rgba(29, 48, 123, 0.12);
+}
 .kbase .div-button {
   display: flex;
   align-items: center;
   width: 100%;
   padding: 4px;
   margin-bottom: 44px;
+  justify-content: center;
 }
 .kbase .div-button button {
   width: 263.6px;
@@ -774,131 +780,162 @@ img {
   border-radius: 5px;
   color: #616e7c;
   background-color: #f5f5f5;
+  transition: 0.5s;
 }
 .kbase .div-button .clicked {
   background-color: #1d307b !important;
   color: white !important;
 }
-.kbase .ant-col-15 .title {
-  font-size: 20px;
-  border-bottom: 1px solid rgba(29, 48, 123, 0.12);
-}
-.kbase .ant-col-15 .files-container {
+.kbase .ant-col-18 .files-container {
   width: 100%;
   display: flex;
   margin-bottom: 20px;
 }
-.kbase .ant-col-15 .files-container .ant-row {
-  row-gap: 80px;
+.kbase .ant-col-18 .files-container .ant-row {
   width: 100%;
   justify-content: start;
 }
-.kbase .ant-col-15 .files-container .ant-row .files {
+.kbase .ant-col-18 .files-container .ant-row .files {
   border-top: 6px solid #1d307b;
   height: 110px;
   background-color: #f5f5f5;
-  padding: 32px 20px 16px 16px;
+  padding: 16px;
+  margin-bottom: 25px;
+  margin-right: 8px;
 }
-.kbase .ant-col-15 .files-container .ant-row .files .center {
+.kbase .ant-col-18 .files-container .ant-row .files p {
+  font-size: 14px;
+}
+.kbase .ant-col-18 .files-container .ant-row .files .center {
   display: flex;
 }
-.kbase .ant-col-15 .files-container .ant-row .files .center img {
+.kbase .ant-col-18 .files-container .ant-row .files .center img {
   margin-right: 10px;
   width: 24px;
 }
-.kbase .ant-col-15 .files-container .ant-row .files a {
-  float: left;
+.kbase .ant-col-18 .files-container .ant-row .files a {
   color: black;
 }
-.kbase .ant-col-15 .files-container .lastFile {
+.kbase .ant-col-18 .files-container .lastFile {
   height: 110px;
   margin-right: 12px;
   background-color: #f5f5f5;
-  padding: 32px 20px 16px 16px;
+  padding: 16px;
   border-top: 6px solid #1d307b;
   margin-bottom: 20px;
 }
-.kbase .ant-col-15 .files-container .lastFile .center {
+.kbase .ant-col-18 .files-container .lastFile .center {
   display: flex;
 }
-.kbase .ant-col-15 .files-container .lastFile .center img {
+.kbase .ant-col-18 .files-container .lastFile .center img {
   margin-right: 10px;
   width: 24px;
 }
-.kbase .ant-col-15 .files-container .subtitle {
+.kbase .ant-col-18 .files-container .lastFile .center a {
+  color: black;
+}
+.kbase .ant-col-18 .files-container .subtitle {
   font-size: 20px;
 }
 
-.partners {
-  margin-left: 6%;
-  width: 100%;
+.partner {
+  padding: 64px 249px 97px 248px;
 }
-
-.partners h2 {
+.partner h2 {
   color: #1d307b;
-  margin-top: 68px;
+  font-size: 42px;
 }
-
-.boxContainer {
+.partner h2 p {
+  font-size: 42px;
+}
+.partner .boxContainer {
   display: flex;
   width: 100%;
 }
-
-.bigBox {
-  width: 659.5px;
-  height: 400px;
+.partner .boxContainer .bigBox {
   background-color: #f5f5f5;
   border-top: 6px solid #1d307b;
   margin-right: 24px;
   margin-bottom: 24px;
   padding: 40px;
+  height: 28.5em;
 }
-
-.headPic {
-  object-fit: none;
-  height: 100px;
-  width: 220px;
+.partner .boxContainer .bigBox .headPic {
+  object-fit: contain;
+  height: 9em;
+  width: 20em;
   margin-bottom: 20px;
 }
-
-.nextButton {
+.partner .boxContainer .bigBox .nextButton {
   float: right;
   display: flex;
-  margin-top: 60px;
+  justify-content: center;
 }
-
-.nextButton p {
+.partner .boxContainer .bigBox .nextButton p {
   margin-right: 8px;
+  margin-top: 15px;
+  color: #616E7C;
 }
-
-.nextButton img {
+.partner .boxContainer .bigBox .nextButton img {
   width: 56px;
   height: 56px;
+  object-fit: cover;
+  transition: 0.3s;
 }
-
-.smallBox {
+.partner .boxContainer .bigBox .nextButton img:hover {
+  transform: scale(1.1);
+  transition: 0.3s;
+}
+.partner .boxContainer .smallBox {
   margin-right: 24px;
   margin-bottom: 24px;
   background-color: #f5f5f5;
   border-top: 6px solid #1d307b;
-  width: 431.67px;
-  height: 400px;
   padding: 40px;
 }
-
-.lastBox {
-  margin-bottom: 57px;
+.partner .boxContainer .smallBox .headPic {
+  object-fit: contain;
+  height: 6em;
+  width: 24em;
+  margin-bottom: 20px;
+}
+.partner .boxContainer .smallBox .nextButton {
+  float: right;
+  display: flex;
+}
+.partner .boxContainer .smallBox .nextButton p {
+  margin-right: 8px;
+  margin-top: 15px;
+  color: #616E7C;
+}
+.partner .boxContainer .smallBox .nextButton img {
+  width: 56px;
+  height: 56px;
+  object-fit: cover;
+  transition: 0.3s;
+}
+.partner .boxContainer .smallBox .nextButton img:hover {
+  transition: 0.3s;
+  transform: scale(1.1);
 }
 
 .proj {
   margin-left: 233px;
+}
+.proj .title {
+  font-size: 24px;
+}
+.proj ul li {
+  list-style-type: circle;
+  margin-left: 20px;
 }
 .proj .div-button {
   display: flex;
   align-items: center;
   width: 100%;
   padding: 4px;
-  margin-bottom: 44px;
+  margin-bottom: 24px;
+  margin-top: 24px;
 }
 .proj .div-button button {
   width: 263.6px;
@@ -908,19 +945,11 @@ img {
   border-radius: 5px;
   color: #616e7c;
   background-color: #f5f5f5;
+  transition: 0.5s;
 }
 .proj .div-button .clicked {
   background-color: #1d307b !important;
   color: white !important;
-}
-
-.img {
-  height: 305px;
-  width: 1342px;
-}
-
-.img img {
-  object-fit: none;
 }
 
 .IntroAbout {
