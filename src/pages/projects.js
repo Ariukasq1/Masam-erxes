@@ -6,11 +6,17 @@ import Config from "../config";
 
 const wp = new WPAPI({ endpoint: Config.apiUrl });
 
-const Projects = ({ projects }) => {
+const Projects = ({ projects, categories, buttonsCat, buttonsPosts }) => {
+  console.log(categories);
   return (
-      <div className="page projects">
-        <Proj projects={projects} />
-      </div>
+    <div className="page projects">
+      <Proj
+        projects={projects}
+        categories={categories}
+        buttonsCat={buttonsCat}
+        buttonsPosts={buttonsPosts}
+      />
+    </div>
   );
 };
 Projects.getInitialProps = async () => {
@@ -22,7 +28,24 @@ Projects.getInitialProps = async () => {
       return data[0];
     });
 
-  return { projects };
+  const buttonsCat = await wp
+    .categories()
+    .slug("buttons")
+    .embed()
+    .then((data) => {
+      return data[0];
+    });
+  const buttonsPosts = await wp
+    .posts()
+    .categories(buttonsCat.id)
+    .embed()
+    .perPage(21)
+    .then((data) => {
+      return data;
+    });
+
+  const categories = await wp.categories().parent(buttonsCat.id).embed();
+  return { projects, categories, buttonsCat, buttonsPosts };
 };
 
 export default Projects;

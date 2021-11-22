@@ -812,14 +812,14 @@ img {
   display: flex;
   align-items: center;
   width: 100%;
-  padding: 4px;
   margin-bottom: 44px;
   justify-content: center;
 }
 .kbase .div-button button {
-  width: 263.6px;
+  width: 252px;
   height: 44px;
   margin-right: 3px;
+  margin-bottom: 3px;
   border: 1px solid #1d307b;
   border-radius: 5px;
   color: #616e7c;
@@ -936,6 +936,7 @@ img {
   background-color: #f5f5f5;
   border-top: 6px solid #1d307b;
   padding: 40px;
+  height: 28.5em;
 }
 .partner .boxContainer .smallBox .headPic {
   object-fit: contain;
@@ -974,6 +975,7 @@ img {
   margin-left: 20px;
 }
 .proj .div-button {
+  justify-content: center;
   display: flex;
   align-items: center;
   width: 100%;
@@ -982,9 +984,10 @@ img {
   margin-top: 24px;
 }
 .proj .div-button button {
-  width: 263.6px;
+  width: 187px;
   height: 44px;
   margin-right: 3px;
+  margin-bottom: 3px;
   border: 1px solid #1d307b;
   border-radius: 5px;
   color: #616e7c;

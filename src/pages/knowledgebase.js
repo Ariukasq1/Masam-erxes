@@ -13,22 +13,47 @@ const Knowledgebase = ({
   barimt2,
   barimt3,
   barimtlast,
+  buttonCat,
+  buttonPosts,
+  categories,
 }) => {
+  // console.log(categories);
+  // console.log(buttonCat.id);
+  // console.log(buttonPosts, "Aaaaaaaaaaa");
   return (
-      <div className="page knowledgebase">
-        <Kbase
-          knowledgeBase={knowledgeBase}
-          knowledge={knowledge}
-          barimt1={barimt1}
-          barimt2={barimt2}
-          barimt3={barimt3}
-          barimtlast={barimtlast}
-        />
-      </div>
+    <div className="page knowledgebase">
+      <Kbase
+        knowledgeBase={knowledgeBase}
+        knowledge={knowledge}
+        barimt1={barimt1}
+        barimt2={barimt2}
+        barimt3={barimt3}
+        barimtlast={barimtlast}
+        buttonCat={buttonCat}
+        buttonPosts={buttonPosts}
+        categories={categories}
+      />
+    </div>
   );
 };
 
 Knowledgebase.getInitialProps = async () => {
+  const buttonCat = await wp
+    .categories()
+    .slug("button")
+    .embed()
+    .then((data) => {
+      return data[0];
+    });
+  const buttonPosts = await wp
+    .posts()
+    .categories(buttonCat.id)
+    .embed()
+    .perPage(21)
+    .then((data) => {
+      return data;
+    });
+  const categories = await wp.categories().parent(buttonCat.id).embed();
   const knowledgeBase = await wp
     .posts()
     .slug("knowledgeBase")
@@ -77,7 +102,17 @@ Knowledgebase.getInitialProps = async () => {
       return data[0];
     });
 
-  return { knowledgeBase, knowledge, barimt1, barimt2, barimt3, barimtlast };
+  return {
+    categories,
+    knowledgeBase,
+    buttonCat,
+    buttonPosts,
+    knowledge,
+    barimt1,
+    barimt2,
+    barimt3,
+    barimtlast,
+  };
 };
 
 export default Knowledgebase;

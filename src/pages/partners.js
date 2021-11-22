@@ -7,129 +7,60 @@ import { Partner } from "../components/partners/Partners";
 const wp = new WPAPI({ endpoint: Config.apiUrl });
 
 const Partners = ({
-  partners,
-  bigBox1,
-  bigBox2,
-  bigBox3,
-  bigBox4,
-  smallbox1,
-  smallbox2,
-  smallbox3,
-  smallbox4,
-  smallbox5,
-  smallbox6,
+  partner_organizationsCat,
+  partner_organizationsPosts,
+  partners_orgCat,
+  partners_orgPosts,
 }) => {
   return (
-      <div className="page partners">
-        <Partner
-          partners={partners}
-          bigBox1={bigBox1}
-          bigBox2={bigBox2}
-          bigBox3={bigBox3}
-          bigBox4={bigBox4}
-          smallbox1={smallbox1}
-          smallbox2={smallbox2}
-          smallbox3={smallbox3}
-          smallbox4={smallbox4}
-          smallbox5={smallbox5}
-          smallbox6={smallbox6}
-        />
-      </div>
-
+    <div className="page partners">
+      <Partner
+        partner_organizationsCat={partner_organizationsCat}
+        partner_organizationsPosts={partner_organizationsPosts}
+        partners_orgCat={partners_orgCat}
+        partners_orgPosts={partners_orgPosts}
+      />
+    </div>
   );
 };
 
 Partners.getInitialProps = async () => {
-  const partners = await wp
-    .posts()
-    .slug("partners")
+  const partner_organizationsCat = await wp
+    .categories()
+    .slug("partner_organizations")
     .embed()
     .then((data) => {
       return data[0];
     });
-  const bigBox1 = await wp
+  const partner_organizationsPosts = await wp
     .posts()
-    .slug("bigBox1")
+    .categories(partner_organizationsCat.id)
+    .embed()
+    .perPage(100)
+    .then((data) => {
+      return data;
+    });
+  const partners_orgCat = await wp
+    .categories()
+    .slug("partners_org")
     .embed()
     .then((data) => {
       return data[0];
     });
-  const bigBox2 = await wp
+  const partners_orgPosts = await wp
     .posts()
-    .slug("bigBox2")
+    .categories(partners_orgCat.id)
     .embed()
+    .perPage(100)
     .then((data) => {
-      return data[0];
-    });
-  const bigBox3 = await wp
-    .posts()
-    .slug("bigBox3")
-    .embed()
-    .then((data) => {
-      return data[0];
-    });
-  const bigBox4 = await wp
-    .posts()
-    .slug("bigBox4")
-    .embed()
-    .then((data) => {
-      return data[0];
-    });
-  const smallbox1 = await wp
-    .posts()
-    .slug("smallbox1")
-    .embed()
-    .then((data) => {
-      return data[0];
-    });
-  const smallbox2 = await wp
-    .posts()
-    .slug("smallbox2")
-    .embed()
-    .then((data) => {
-      return data[0];
-    });
-  const smallbox3 = await wp
-    .posts()
-    .slug("smallbox3")
-    .embed()
-    .then((data) => {
-      return data[0];
-    });
-  const smallbox4 = await wp
-    .posts()
-    .slug("smallbox4")
-    .embed()
-    .then((data) => {
-      return data[0];
-    });
-  const smallbox5 = await wp
-    .posts()
-    .slug("smallbox5")
-    .embed()
-    .then((data) => {
-      return data[0];
-    });
-  const smallbox6 = await wp
-    .posts()
-    .slug("smallbox6")
-    .embed()
-    .then((data) => {
-      return data[0];
+      return data;
     });
 
   return {
-    partners,
-    bigBox1,
-    bigBox2,
-    bigBox3,
-    bigBox4,
-    smallbox1,
-    smallbox2,
-    smallbox3,
-    smallbox4,
-    smallbox5,
-    smallbox6,
+    partner_organizationsCat,
+    partner_organizationsPosts,
+    partners_orgCat,
+    partners_orgPosts,
   };
 };
 
