@@ -15,7 +15,7 @@ export const Partner = ({
         <Row className="boxContainer">
           {partner_organizationsPosts.map((word, ind) => {
             return (
-              <Col span={12} key={ind} className="text">
+              <Col span={12} key={ind}>
                 <div className="bigBox">
                   <img
                     src={getData(word._embedded, "image")}
@@ -42,7 +42,7 @@ export const Partner = ({
         <Row className="boxContainer">
           {partners_orgPosts.map((word, ind) => {
             return (
-              <Col span={8} key={ind} className="text">
+              <Col span={8} key={ind}>
                 <div className="smallBox">
                   <img
                     src={getData(word._embedded, "image")}
