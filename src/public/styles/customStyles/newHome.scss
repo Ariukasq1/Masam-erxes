@@ -207,14 +207,7 @@
                     rgba(0, 0, 0, 0.5) 100%
                   );
                   .overlayText {
-                    position: absolute;
-                    margin-bottom: 22px;
-                    margin-left: 13px;
-                    bottom: 0;
                     color: #ffffff;
-                    font-weight: 700;
-                    line-height: 24px;
-                    letter-spacing: 0.15px;
                   }
                 }
               }
@@ -305,33 +298,73 @@
       }
     }
   }
-  .masamToNews {
-    background-color: rgba(245, 245, 245, 1);
-    padding: 100px 229px 147px 229px;
-    height: 500px;
-    .headerTo {
-      width: 100%;
-      justify-content: space-between;
-      align-items: flex-end;
-      h1 {
-        width: 701px;
-        line-height: 68.73px;
-        letter-spacing: -0.5px;
-        margin-bottom: 0;
+}
+.masamToNews {
+  background-color: rgba(245, 245, 245, 1);
+  padding: 100px 229px 147px 229px;
+  .headerTo {
+    width: 100%;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 40px;
+    h1 {
+      width: 701px;
+      line-height: 68.73px;
+      letter-spacing: -0.5px;
+      margin-bottom: 0;
+    }
+    button {
+      border: none;
+      background-color: none;
+      margin: 24px 38px;
+      font-size: 18px;
+      font-weight: 700;
+      color: #1d307b;
+      background-color: rgba(245, 245, 245, 1);
+      box-shadow: none;
+      &:hover {
+        cursor: pointer;
+        background-color: #1d307b;
+        color: white;
       }
-      button {
-        border: none;
-        background-color: none;
-        margin: 24px 38px;
-        font-size: 18px;
-        font-weight: 700;
-        color: #1d307b;
-        background-color: rgba(245, 245, 245, 1);
-        box-shadow: none;
-        &:hover {
-          cursor: pointer;
-          background-color: #1d307b;
-          color: white;
+    }
+  }
+  .newsTo {
+    width: 100%;
+    height: 658px;
+    .bigNews {
+      height: 100%;
+      > div {
+        background: rgba(255, 255, 255, 1);
+        position: relative;
+        width: 100%;
+        height: 100%;
+        border-top: 8px solid rgba(31, 41, 51, 1);
+        .overlayText {
+          color: #ffffff;
+        }
+      }
+    }
+    .medNews {
+      height: 100%;
+      > div {
+        position: relative;
+        background: rgba(255, 255, 255, 1);
+        float: left;
+        width: calc(50% - 25px);
+        height: calc(50% - 12.5px);
+        border-top: 8px solid rgba(31, 41, 51, 1);
+        .overlayText {
+          color: #ffffff;
+        }
+        &:first-child {
+          margin-right: 25px;
+          margin-left: 25px;
+        }
+        &:last-child {
+          margin-top: 25px;
+          margin-left: 25px;
+          width: calc(100% - 25px);
         }
       }
     }

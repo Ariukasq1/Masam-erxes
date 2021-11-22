@@ -1,27 +1,18 @@
 import React from "react";
 import { Row, Col } from "antd";
+import { getData } from "../../utils";
 
-export const Structure = () => {
+export const Structure = ({ data }) => {
+  const { title, content } = data;
   return (
     <Row className="structure">
       <Col span={16}>
-        <h3>Төслийн бүрэлдхүүн хэсэг:</h3>
-        <p>
-          1. Хамтын ажилллагаанд суурилсан нийгмийн эгэх хариуцлагын үйл явцыг
-          бэхжүүлэхэд МХТ-ийг өргөнөөр ашиглах
-        </p>
-        <p>
-          2. Төсвийн хуваарилалт, төрийн үйлчилгээнд оролцоот хяналт-шинжилгээ
-          хийх чиглэлээр чадавхжуулах
-        </p>
-        <p>
-          3. Бодлогын түвшинд институцийн уялдаа холбоо, чадавхийг нэмэгдүүлэх
-        </p>
-        <p>4. Мэдлэг, туршлагаа нутагшуулан өргөжүүлэх</p>
+        <h3>{title.rendered}</h3>
+        <div dangerouslySetInnerHTML={{ __html: content.rendered }} />
       </Col>
       <Col span={8}></Col>
       <div className="image">
-        <img src="images/about/structure.png" />
+        <img src={getData(data._embedded, "image")} />
       </div>
     </Row>
   );

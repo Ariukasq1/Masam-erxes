@@ -29,6 +29,7 @@ const Index = ({
   irgenTurCat,
   irgenTurPosts,
   activityGallery,
+  allNewsPosts,
 }) => {
   const settings = {
     infinite: true,
@@ -69,7 +70,7 @@ const Index = ({
             </a>
           </Link>
         </Row>
-        <MasamToNews />
+        <MasamToNews posts={allNewsPosts} />
       </Col>
       <Actions
         actionsTitle={actionsTitle}
@@ -188,6 +189,21 @@ Index.getInitialProps = async () => {
     .then((data) => {
       return data;
     });
+  const allNews = await wp
+    .categories()
+    .slug("news")
+    .embed()
+    .then((data) => {
+      return data[0];
+    });
+  const allNewsPosts = await wp
+    .posts()
+    .categories(allNews.id)
+    .embed()
+    .perPage(4)
+    .then((data) => {
+      return data;
+    });
 
   return {
     introduction,
@@ -203,6 +219,7 @@ Index.getInitialProps = async () => {
     irgenTurCat,
     irgenTurPosts,
     activityGallery,
+    allNewsPosts,
   };
 };
 
