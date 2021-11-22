@@ -23,6 +23,7 @@ export const getData = (object, type) => {
       break;
   }
 };
+export default getData;
 
 export const prefixer = (url) => {
   if (process.env.NODE_ENV !== "production") {

@@ -1,164 +1,69 @@
 import { Row, Col } from "antd";
 import React from "react";
+import getData from "../../utils";
 
-export const Partner = () => {
+export const Partner = ({
+  partner_organizationsCat,
+  partner_organizationsPosts,
+  partners_orgCat,
+  partners_orgPosts,
+}) => {
   return (
-    <Row className="partners">
-      <Col span={18}>
-        <h2>
-          Хэрэгжүүлэгч
-          <br />
-          Байгууллагууд
-        </h2>
-        <div className="boxContainer">
-          <div className="bigBox">
-            <img className="headPic" src="images/home/masamLogo.png" />
-            <p>
-              Amet minim mollit non deserunt ullamco est sit aliqua dolor do
-              amet sint. Velit officia consequat duis enim velit mollit.
-              Exercitation veniam consequat sunt nostrud amet.
-            </p>
-            <div className="nextButton">
-              <p>
-                visit website
-              </p>
-              <img src="#" alt="PDF" />
-            </div>
-          </div>
-          <div className="bigBox">
-            <img className="headPic" src="images/home/masamLogo.png" />
-            <p>
-              Amet minim mollit non deserunt ullamco est sit aliqua dolor do
-              amet sint. Velit officia consequat duis enim velit mollit.
-              Exercitation veniam consequat sunt nostrud amet.
-            </p>
-            <div className="nextButton">
-              <p>
-                visit website
-              </p>
-              <img src="#" alt="PDF" />
-            </div>
-          </div>
-        </div>
-        <div className="boxContainer">
-          <div className="bigBox">
-            <img className="headPic" src="images/home/masamLogo.png" />
-            <p>
-              Amet minim mollit non deserunt ullamco est sit aliqua dolor do
-              amet sint. Velit officia consequat duis enim velit mollit.
-              Exercitation veniam consequat sunt nostrud amet.
-            </p>
-            <div className="nextButton">
-              <p>
-                visit website
-              </p>
-              <img src="#" alt="PDF" />
-            </div>
-          </div>
-          <div className="bigBox">
-            <img className="headPic" src="images/home/masamLogo.png" />
-            <p>
-              Amet minim mollit non deserunt ullamco est sit aliqua dolor do
-              amet sint. Velit officia consequat duis enim velit mollit.
-              Exercitation veniam consequat sunt nostrud amet.
-            </p>
-            <div className="nextButton">
-              <p>
-                visit website
-              </p>
-              <img src="#" alt="PDF" />
-            </div>
-          </div>
-        </div>
-        <h2>Түнш байгууллагууд</h2>
-        <div className="boxContainer">
-          <div className="smallBox">
-            <img className="headPic" src="images/home/masamLogo.png" />
-            <p>
-              Amet minim mollit non deserunt ullamco est sit aliqua dolor do
-              amet sint. Velit officia consequat duis enim velit mollit.
-              Exercitation veniam consequat sunt nostrud amet.
-            </p>
-            <div className="nextButton">
-              <p>
-                visit website
-              </p>
-              <img src="#" alt="PDF" />
-            </div>
-          </div>
-          <div className="smallBox">
-            <img className="headPic" src="images/home/masamLogo.png" />
-            <p>
-              Amet minim mollit non deserunt ullamco est sit aliqua dolor do
-              amet sint. Velit officia consequat duis enim velit mollit.
-              Exercitation veniam consequat sunt nostrud amet.
-            </p>
-            <div className="nextButton">
-              <p>
-                visit website
-              </p>
-              <img src="#" alt="PDF" />
-            </div>
-          </div>
-          <div className="smallBox">
-            <img className="headPic" src="images/home/masamLogo.png" />
-            <p>
-              Amet minim mollit non deserunt ullamco est sit aliqua dolor do
-              amet sint. Velit officia consequat duis enim velit mollit.
-              Exercitation veniam consequat sunt nostrud amet.
-            </p>
-            <div className="nextButton">
-              <p>
-                visit website
-              </p>
-              <img src="#" alt="PDF" />
-            </div>
-          </div>
-        </div>
-        <div className="boxContainer">
-          <div className="smallBox">
-            <img className="headPic" src="images/home/masamLogo.png" />
-            <p>
-              Amet minim mollit non deserunt ullamco est sit aliqua dolor do
-              amet sint. Velit officia consequat duis enim velit mollit.
-              Exercitation veniam consequat sunt nostrud amet.
-            </p>
-            <div className="nextButton">
-              <p>
-                visit website
-              </p>
-              <img src="#" alt="PDF" />
-            </div>
-          </div>
-          <div className="smallBox">
-            <img className="headPic" src="images/home/masamLogo.png" />
-            <p>
-              Amet minim mollit non deserunt ullamco est sit aliqua dolor do
-              amet sint. Velit officia consequat duis enim velit mollit.
-              Exercitation veniam consequat sunt nostrud amet.
-            </p>
-            <div className="nextButton">
-              <p>
-                visit website
-              </p>
-              <img src="#" alt="PDF" />
-            </div>
-          </div>
-          <div className="smallBox lastBox">
-            <img className="headPic" src="images/home/masamLogo.png" />
-            <p>
-              Amet minim mollit non deserunt ullamco est sit aliqua dolor do
-              amet sint. Velit officia consequat duis enim velit mollit.
-              Exercitation veniam consequat sunt nostrud amet.
-            </p>
-            <div className="nextButton">
-              <p>
-                visit website
-              </p>
-              <img src="#" alt="PDF" />
-            </div>
-          </div>
-        </div>
+    <Row className="partner">
+      <Col span={24}>
+        <h2>{partner_organizationsCat.name}</h2>
+        <Row className="boxContainer">
+          {partner_organizationsPosts.map((word, ind) => {
+            return (
+              <Col span={12} key={ind}>
+                <div className="bigBox">
+                  <img
+                    src={getData(word._embedded, "image")}
+                    className="headPic"
+                  />
+                  <div
+                    dangerouslySetInnerHTML={{
+                      __html: word.content.rendered,
+                    }}
+                  />
+                  <div className="nextButton">
+                    <p>visit website</p>
+                    <a href="#">
+                      <img src="/images/home/Button.png" />
+                    </a>
+                  </div>
+                </div>
+              </Col>
+            );
+          })}
+        </Row>
+
+        <h2>{partners_orgCat.name}</h2>
+        <Row className="boxContainer">
+          {partners_orgPosts.map((word, ind) => {
+            return (
+              <Col span={8} key={ind}>
+                <div className="smallBox">
+                  <img
+                    src={getData(word._embedded, "image")}
+                    className="headPic"
+                  />
+                  <div
+                    dangerouslySetInnerHTML={{
+                      __html: word.content.rendered,
+                    }}
+                  />
+                  <div className="nextButton">
+                    <p>visit website</p>
+                    <a href="#">
+                      <img src="/images/home/Button.png" />
+                    </a>
+                  </div>
+                </div>
+              </Col>
+            );
+          })}
+        </Row>
       </Col>
     </Row>
   );

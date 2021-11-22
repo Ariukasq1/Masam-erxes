@@ -1,68 +1,87 @@
-.kbase{
-    margin-left: 233px;
-}
-.title{
+.kbase {
+  padding: 40px 229px 62px 229px;
+  .panel .ant-collapse-header{
     font-size: 20px;
-}
-.line{
-    width: 1342px;
-    height: 1px;
-    border: 1px solid rgba(29, 48, 123, 0.12);
-    margin-bottom: 20px;
-}
-.kbase p{
-    margin-bottom: 20px;
-}
-.div-button {
+    font-weight:bold ;
+    border-bottom: 1px solid rgba(29, 48, 123, 0.12);
+  }
+  .div-button {
     display: flex;
-    justify-content: center;
     align-items: center;
-    width: 1342px;
-    padding: 4px;
-    margin-bottom: 44px;
-}
-.div-button button{
-    width: 263.6px;
-    height: 44px;
-    margin-right: 3px;
-    border: 1px solid #1D307B;
-    border-radius: 5px;
-    color: #616E7C;
-    background-color: #F5F5F5;
-}
-.clicked{
-    background-color: #1D307B !important;
-    color:white !important;
-}
-.files{
-    border-top: 6px solid #1D307B;
-    width: 226px;
-    height: 110px;
-    margin-right: 12px;
-    background-color: #F5F5F5;
-    padding: 32px 20px 16px 16px;
-}
-.center{
-    display: flex;
-}
-.files a{
-    float: left;
-    color: black;
-}
-.center img{
-    width: 50px;
-    height: 50px;
-}
-.files-container{
     width: 100%;
-    position: relative;
-    display:flex;
-    margin-bottom: 20px;
-}
-.lastFile{
-    width: 464px;
-    margin-bottom: 20px;
-}
-.bottom{
-    margin-bottom: 60px;
+    margin-bottom: 44px;
+    justify-content: center;
+    button {
+      width: 252px;
+      height: 44px;
+      margin-right: 3px;
+      margin-bottom: 3px;
+      border: 1px solid #1d307b;
+      border-radius: 5px;
+      color: #616e7c;
+      background-color: #f5f5f5;
+      transition: 0.5s;
+    }
+
+    .clicked {
+      background-color: #1d307b !important;
+      color: white !important;
+    }
+  }
+  .ant-col-18 {
+    .files-container {
+      width: 100%;
+      display: flex;
+      margin-bottom: 20px;
+      .ant-row {
+        width: 100%;
+        justify-content: start;
+
+        .files {
+          border-top: 6px solid #1d307b;
+          height: 110px;
+          background-color: #f5f5f5;
+          padding: 16px ;
+          margin-bottom: 25px;
+          margin-right: 8px;
+          p {
+            font-size: 14px;
+          }
+          .center {
+            display: flex;
+
+            img {
+              margin-right: 10px;
+              width: 24px;
+            }
+          }
+          a {
+            color: black;
+          }
+        }
+      }
+      .lastFile {
+        height: 110px;
+        margin-right: 12px;
+        background-color: #f5f5f5;
+        padding: 16px;
+        border-top: 6px solid #1d307b;
+        margin-bottom: 20px;
+        .center {
+          display: flex;
+
+          img {
+            margin-right: 10px;
+            width: 24px;
+          }
+          a {
+            color: black;
+          }
+        }
+      }
+      .subtitle {
+        font-size: 20px;
+      }
+    }
+  }
 }

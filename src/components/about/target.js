@@ -1,25 +1,17 @@
 import React from "react";
 import { Row, Col } from "antd";
+import { getData } from "../../utils";
 
-export const Target = () => {
+export const Target = ({ data }) => {
+  const { title, content } = data;
   return (
     <Row className="target">
       <Col span={16}>
-        <img src="images/about/target.png" />
+        <img src={getData(data._embedded, "image")} />
       </Col>
       <Col span={7}>
-        <h2>Төслийн зорилт</h2>
-        <p>
-          Монгол улсын хэмжээнд нийгмийн эгэх хариуцлагыг бэхжүүлэх замаар эрүүл
-          мэндийн салбарт төрийн хөрөнгө санхүүг зохистой зарцуулж төрийн
-          үйлчилгээ, төрийн хөрөнгө оруулалтын үр дүнг нэмэгдүүлэхэд оршино.
-          Төслийн энэхүү шатанд иргэний нийгмийн болон төрийн байгууллагын
-          мэдээлэл ашиглах, бодлого боловсруулалт, хэрэгжилтэд хяналт тавих
-          чадавхыг нэмэгдүүлнэ. Үүнд (i) анхан шатны эрүүл мэндийн тусламж
-          үйлчилгээний бодлогын төлөвлөлт, хэрэгжилт (ii) төрийн хөрөнгө
-          оруулалттай холбогдох төсвийн төлөвлөлт, гүйцэтгэлийн уялдааг хангах
-          асуудал багтана.
-        </p>
+        <h2>{title.rendered}</h2>
+        <div dangerouslySetInnerHTML={{ __html: content.rendered }} />
       </Col>
     </Row>
   );

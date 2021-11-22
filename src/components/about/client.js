@@ -1,26 +1,17 @@
 import React from "react";
 import { Row, Col } from "antd";
+import { getData } from "../../utils";
 
-export const Clients = () => {
+export const Clients = ({ data }) => {
+  const { title, content } = data;
   return (
     <Row className="clients">
       <Col span={8}>
-        <h2>Үр шим хүртэгчид:</h2>
-        <p>
-          Төрийн үйлчилгээг хүртэгч Монгол улсын иргэн, бусад хуулийн этгээд
-        </p>
-        <p>
-          Үндэсний болон орон нутгийн иргэний нийгэм, технологийн түүчээ
-          байгууллагууд
-        </p>
-        <p>
-          Төрийн захиргааны төв болон орон нутгийн удирдлага, төрийн
-          үйлчилгээний байгууллага
-        </p>
-        <p>Хэвлэл мэдээлэл, эрдэм шинжилгээний байгууллага</p>
+        <h2>{title.rendered}</h2>
+        <div dangerouslySetInnerHTML={{ __html: content.rendered }} />
       </Col>
       <Col span={15}>
-        <img src="images/about/client.png" />
+        <img src={getData(data._embedded, "image")} />
       </Col>
     </Row>
   );

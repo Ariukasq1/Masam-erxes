@@ -1,92 +1,156 @@
 import { Row, Col } from "antd";
-import React from "react";
+import React, { useEffect, useState } from "react";
+import getData from "../../utils";
+import { Collapse } from "antd";
+const { Panel } = Collapse;
 
-export const Kbase = () => {
+export const Kbase = ({
+  knowledgeBase,
+  knowledge,
+  barimt1,
+  barimt2,
+  barimt3,
+  barimtlast,
+  buttonCat,
+  buttonPosts,
+  categories,
+}) => {
+  const [state, setState] = useState(27);
+  let menu;
+
+  const posts = (type) => {
+    console.log(type);
+    return (
+      <>
+        {buttonPosts.map((post, ind) => {
+          console.log(post);
+
+          if (type !== post.categories[0] && type !== post.categories[1]) {
+            return null;
+          }
+          return (
+            <div key={ind}>
+              <Collapse
+                defaultActiveKey={["1"]}
+                expandIconPosition={"right"}
+                ghost
+              >
+                <Panel
+                  className="panel"
+                  header={knowledgeBase.title.rendered}
+                  key="1"
+                >
+                  <Row>
+                    <Col span={18}>
+                      <div
+                        dangerouslySetInnerHTML={{
+                          __html: knowledgeBase.content.rendered,
+                        }}
+                      />
+                      <Row className="files-container">
+                        <Row>
+                          <Col span={6} className="files">
+                            <p>
+                              <b>{barimt1.title.rendered}</b>
+                            </p>
+                            <div className="center">
+                              <img src={getData(barimt1._embedded, "image")} />
+                              <a href="#" download>
+                                <div
+                                  dangerouslySetInnerHTML={{
+                                    __html: barimt1.content.rendered,
+                                  }}
+                                />
+                              </a>
+                            </div>
+                          </Col>
+
+                          <Col span={6} className="files">
+                            <p>
+                              <b>{barimt2.title.rendered}</b>
+                            </p>
+                            <div className="center">
+                              <img src={getData(barimt2._embedded, "image")} />
+                              <a href="#" download>
+                                <div
+                                  dangerouslySetInnerHTML={{
+                                    __html: barimt2.content.rendered,
+                                  }}
+                                />
+                              </a>
+                            </div>
+                          </Col>
+
+                          <Col span={6} className="files">
+                            <p>
+                              <b>{barimt3.title.rendered}</b>
+                            </p>
+                            <div className="center">
+                              <img src={getData(barimt3._embedded, "image")} />
+                              <a href="#" download>
+                                <div
+                                  dangerouslySetInnerHTML={{
+                                    __html: barimt3.content.rendered,
+                                  }}
+                                />
+                              </a>
+                            </div>
+                          </Col>
+                        </Row>
+                        <p className="subtitle">
+                          <b>{knowledge.title.rendered}</b>
+                        </p>
+                        <div
+                          dangerouslySetInnerHTML={{
+                            __html: knowledge.content.rendered,
+                          }}
+                        />
+                        <Col span={12} className="lastFile">
+                          <p>
+                            <b>{barimtlast.title.rendered}</b>
+                          </p>
+                          <div className="center">
+                            <img src={getData(barimtlast._embedded, "image")} />
+                            <a href="#" download>
+                              <div
+                                dangerouslySetInnerHTML={{
+                                  __html: barimtlast.content.rendered,
+                                }}
+                              />
+                            </a>
+                          </div>
+                        </Col>
+                      </Row>
+                    </Col>
+                  </Row>
+                </Panel>
+              </Collapse>
+            </div>
+          );
+        })}
+      </>
+    );
+  };
+
   return (
     <Row className="kbase">
-      <Col span={12}>
-        <div className="page">
-          <div className="div-button">
-            <button className="clicked" type="button">
-              Хууль,эрх зүй
-            </button>
-            <button type="button">Судалгаа</button>
-            <button type="button">Сургалт</button>
-            <button type="button">Гарын авлага</button>
-            <button type="button">Холбоотой цахим хуудсууд</button>
-          </div>
-          <p className="title">
-            <b>Эрх зүйн хүрээ</b>
-          </p>
-          <div className="line"></div>
-          <p className="">
-            Монгол улсын хүчин төгөлдөр хууль, холбогдох захиргааны хэм
-            хэмжээний актад тусгасан төрийн байгууллага, нутгийн өөрөө удирдах
-            байгууллагаас шийдвэр гаргахад Иргэдийн Оролцоог хангах аливаа
-            зохицуулалтын өнөөгийн хэрэгжилтийн байдалд хийсэн дүн шинжилгээ
-          </p>
-          <p>
-            Монгол Улсын Засгийн газар, Щвейцарийн Холбооны Улсын Засгийн газар
-            хоорондын хэлэлцээрийн дагуу хэрэгжиж буй “Засаглалыг дэмжих,
-            төвлөрлийг сааруулах хөтөлбөр”-ийн хоёр дахь үе шатанд хэрэгжүүлж
-            буй “Иргэдийн оролцоо” төслийн нэгжээс Монгол Улсын хүчин төгөлдөр
-            бүх хууль, холбогдох бусад эрх зүйн актанд тусгасан төрийн
-            байгууллага, нутгийн өөрөө удирдах байгууллагаас бүх түвшинд шийдвэр
-            гаргахдаа иргэдийг оролцуулах аливаа зохицуулалтын өнөөгийн
-            хэрэгжилтийн байдалд мониторинг хийх, холбогдох хууль, эрх зүйн
-            актын уялдаа холбоо болон зөрчил, давхардал, хийдлийг тодорхойлох,
-            иргэний оролцооны эрх зүйн орчны нөхцөл байдлыг цогц байдлаар үнэлж,
-            дүгнэн шинжилсэн энэхүү судалгааг хийлгэлээ.
-          </p>
-          <div className="files-container">
-            <div className="files">
-              <h4>Баримт, бичиг</h4>
-              <div className="center">
-                <img src="#" alt="PDF" />
-                <a href="#" download>
-                  Судалгааны тайлан
-                </a>
-              </div>
-            </div>
-            <div className="files">
-              <h4>Баримт, бичиг</h4>
-              <div className="center">
-                <img src="#" alt="PDF" />
-                <a href="#" download>
-                  Судалгааны тайлан
-                </a>
-              </div>
-            </div>
-            <div className="files">
-              <h4>Баримт, бичиг</h4>
-              <div className="center">
-                <img src="#" alt="PDF" />
-                <a href="#" download>
-                  Судалгааны тайлан
-                </a>
-              </div>
-            </div>
-          </div>
-          <p className="title">
-            <b>Иргэдийн оролцоо бүхий хуулиудын жагсаалт</b>
-          </p>
-          <p>
-            2016 оны 2 сарын 4-ний байдлаар Монгол улсад нийт 459 хууль хүчин
-            төгөлдөр үйлчилж байгаагаас 105 хуульд (нийт хуулийн дөрөвний нэг
-            орчим) иргэдийн оролцоог хэсэгчлэн зохицуулсан заалт байна. Иргэдийн
-            оролцоо бүхий эдгээр хуулиудыг доор жагсаав.
-          </p>
-          <div className="files lastFile">
-            <h4>Баримт, бичиг</h4>
-            <div className="center">
-              <img src="#" alt="PDF" />
-              <a href="#" download>
-                Иргэдийн оролцоо бүхий хуулиудын жагсаалт
-              </a>
-            </div>
-          </div>
-          <div className="line bottom"></div>
-        </div>
+      <Col span={22}>
+        <Row className="div-button">
+          {categories.map((word, ind) => {
+            return (
+              <Col key={ind}>
+                <button
+                  className={state === word.id ? "clicked" : ""}
+                  onClick={() => setState(word.id)}
+                  type="button"
+                >
+                  {word.name}
+                </button>
+              </Col>
+            );
+          })}
+        </Row>
+        {posts(state)}
       </Col>
     </Row>
   );
