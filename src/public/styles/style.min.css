@@ -892,6 +892,7 @@ img {
   background-color: #f5f5f5;
   border-top: 6px solid #1d307b;
   padding: 40px;
+  height: 28.5em;
 }
 .partner .boxContainer .smallBox .headPic {
   object-fit: contain;
